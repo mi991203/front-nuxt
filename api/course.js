@@ -14,4 +14,10 @@ export default {
       method: 'get'
     })
   },
+  getById(courseId) {
+    return request({
+      url: `/edu-service/front-course/${courseId}`,
+      method: 'get'
+    })
+  }
 }
