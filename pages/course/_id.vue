@@ -152,16 +152,114 @@
         </aside>
         <div class="clear"></div>
       </div>
+
+      <!-- 课程评论 -->
+      <div class="mt50 commentHtml"><div>
+        <h6 class="c-c-content c-infor-title" id="i-art-comment">
+          <span class="commentTitle">课程评论</span>
+        </h6>
+        <section class="lh-bj-list pr mt20 replyhtml">
+          <ul>
+            <li class="unBr">
+              <aside class="noter-pic">
+                <img width="50" height="50" class="picImg" src="~/assets/img/loading.gif">
+              </aside>
+              <div class="of">
+                <section class="n-reply-wrap">
+                  <fieldset>
+                    <textarea name="" v-model="comment.content" placeholder="输入您要评论的文字" id="commentContent"></textarea>
+                  </fieldset>
+                  <p class="of mt5 tar pl10 pr10">
+                    <span class="fl "><tt class="c-red commentContentmeg" style="display: none;"></tt></span>
+                    <input type="button" @click="init3()" value="回复" class="lh-reply-btn">
+                  </p>
+                </section>
+              </div>
+            </li>
+          </ul>
+        </section>
+        <section class="">
+          <section class="question-list lh-bj-list pr">
+            <ul class="pr10">
+              <li v-for="(comment,index) in comments.items" v-bind:key="index">
+                <aside class="noter-pic">
+                  <img width="50" height="50" class="picImg" :src="comment.avatar">
+                </aside>
+                <div class="of">
+                          <span class="fl">
+                          <font class="fsize12 c-blue">
+                            {{comment.nickname}}</font>
+                          <font class="fsize12 c-999 ml5">评论：</font>
+                          </span>
+                </div>
+                <div class="noter-txt mt5">
+                  <p>{{comment.content}}</p>
+                </div>
+                <div class="of mt5">
+                  <div style="text-align: right;">
+                    <input type="button" @click="deleteComment(comment.id)" value="删除" class="lh-reply-btn">
+                  </div>
+                </div>
+
+                <div class="of mt5">
+                  <span class="fr"><font class="fsize12 c-999 ml5">{{comment.gmtCreate}}</font></span>
+                </div>
+
+              </li>
+
+            </ul>
+          </section>
+        </section>
+
+        <!-- 公共分页 开始 -->
+        <div class="paging">
+          <!-- undisable这个class是否存在，取决于数据属性hasPrevious -->
+          <a
+            :class="{undisable: !comments.hasPrevious}"
+            href="#"
+            title="首页"
+            @click.prevent="gotoPage(1)">首</a>
+          <a
+            :class="{undisable: !comments.hasPrevious}"
+            href="#"
+            title="前一页"
+            @click.prevent="gotoPage(comments.current-1)">&lt;</a>
+          <a
+            v-for="page in comments.pages"
+            :key="page"
+            :class="{current: comments.current == page, undisable: comments.current == page}"
+            :title="'第'+page+'页'"
+            href="#"
+            @click.prevent="gotoPage(page)">{{ page }}</a>
+          <a
+            :class="{undisable: !comments.hasNext}"
+            href="#"
+            title="后一页"
+            @click.prevent="gotoPage(comments.current+1)">&gt;</a>
+          <a
+            :class="{undisable: !comments.hasNext}"
+            href="#"
+            title="末页"
+            @click.prevent="gotoPage(comments.pages)">末</a>
+          <div class="clear"/>
+        </div>
+        <!-- 公共分页 结束 -->
+      </div>
+      </div>
     </section>
     <!-- /课程详情 结束 -->
   </div>
 </template>
 
 <script>
+//引入调用course.js文件
 import courseApi from '@/api/course'
-
+//引入调用comment.js文件
+import commentApi from '@/api/comment'
+//引入调用js-cookie
+import cookie from 'js-cookie'
 export default {
-  asyncData({params, error}) {
+  asyncData({ params, error }) {
     return courseApi.getById(params.id)
       .then(response => {
         return {
@@ -169,6 +267,109 @@ export default {
           chapterVideoList: response.data.data.chapterVoList
         }
       })
-  }
-};
+  },
+
+  data() {
+    return {
+      // 分页组件
+      comments:{},
+      page:1,
+      limit:4,
+      total:10,
+      // 评论
+      comment:{
+        content:'',
+        courseId:'',
+        nickname:'',
+        avatar:'',
+      },
+    }
+  },
+
+  created() {
+    this.initComment()
+  },
+
+  methods: {
+    init(){
+      //判断是否登录
+      const token = cookie.get('MindSchool_token')
+      // 如果未登录，提示登录
+      if (token) {
+        this.createOrders()
+      }else{
+        this.$message({
+          type: 'error',
+          message: '请先登录️再进行下一步操作'
+        });
+        //vue路由跳转
+        this.$router.push({
+          path: '/login'
+        })
+      }
+    },
+
+    init2(){
+      //判断是否登录
+      const token = cookie.get('MindSchool_token')
+      // 如果未登录，提示登录
+      if (token) {
+        this.addCollect()
+      }else{
+        this.$message({
+          type: 'error',
+          message: '请先登录️再进行下一步操作'
+        });
+        //vue路由跳转
+        this.$router.push({
+          path: '/login'
+        })
+      }
+    },
+
+    //初始化评论,获取评论列表
+    initComment(){
+      commentApi.getPageList(this.page, this.limit, this.courseWebVo.id).then(response => {
+        this.comments = response.data.data
+      })
+
+    },
+
+    init3(){
+      //判断是否登录
+      const token = cookie.get('user_token')
+      // 如果未登录，提示登录
+      if (token) {
+        this.addComment()
+      }else{
+        this.$message({
+          type: 'error',
+          message: '请先登录️再进行下一步操作'
+        });
+        //vue路由跳转
+        this.$router.push({
+          path: '/login'
+        })
+      }
+    },
+
+    //添加评论
+    addComment(){
+      this.comment.courseId = this.courseWebVo.id
+      this.comment.teacherId = this.courseWebVo.teacherId
+      commentApi.addComment(this.comment).then(response => {
+        if(response.data.success){
+          this.comment.content = ''
+          this.initComment()
+        }
+      })
+    },
+    //跳转页面
+    gotoPage(page){
+      commentApi.getPageList(page, this.limit,this.courseId).then(response => {
+        this.comments = response.data.data
+      })
+    },
+  },
+}
 </script>
