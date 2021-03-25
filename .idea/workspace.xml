@@ -10,10 +10,14 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c1cfa952-78a2-4e7e-b090-239d7ec278d2" name="Default Changelist" comment="实现视频播放">
-      <change afterPath="$PROJECT_DIR$/api/comment.js" afterDir="false" />
+    <list default="true" id="c1cfa952-78a2-4e7e-b090-239d7ec278d2" name="Default Changelist" comment="实现课程评论">
+      <change afterPath="$PROJECT_DIR$/assets/img/teach.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/course/_id.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/course/_id.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/layouts/default.vue" beforeDir="false" afterPath="$PROJECT_DIR$/layouts/default.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/teacher/_id.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/teacher/_id.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +48,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/assets" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/assets/img" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -61,6 +65,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\CodeFile\foreback\starter-template-master\assets\img" />
       <recent name="D:\CodeFile\foreback\starter-template-master\assets" />
     </key>
   </component>
@@ -104,7 +109,10 @@
       <workItem from="1614819063831" duration="87000" />
       <workItem from="1614820779151" duration="4195000" />
       <workItem from="1614825186227" duration="5760000" />
-      <workItem from="1614931454078" duration="912000" />
+      <workItem from="1614931454078" duration="4778000" />
+      <workItem from="1615443478654" duration="274000" />
+      <workItem from="1616044689444" duration="2237000" />
+      <workItem from="1616409267388" duration="17000" />
     </task>
     <task id="LOCAL-00001" summary="完成课程列表和讲师列表页面以及用户注册和登录">
       <created>1614825289312</created>
@@ -120,7 +128,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614825364341</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="实现课程评论">
+      <created>1614932970956</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1614932970956</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -140,35 +155,36 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="完成课程列表和讲师列表页面以及用户注册和登录" />
-    <option name="LAST_COMMIT_MESSAGE" value="完成课程列表和讲师列表页面以及用户注册和登录" />
+    <MESSAGE value="实现课程评论" />
+    <option name="LAST_COMMIT_MESSAGE" value="实现课程评论" />
   </component>
   <component name="WindowStateProjectService">
     <state x="886" y="466" key="#ESLint" timestamp="1612514982389">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state x="886" y="466" key="#ESLint/0.0.2048.1152@0.0.2048.1152" timestamp="1612514982389" />
-    <state width="1515" height="223" key="GridCell.Tab.0.bottom" timestamp="1614851682409">
+    <state width="1515" height="125" key="GridCell.Tab.0.bottom" timestamp="1616047122576">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1515" height="223" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1614851682409" />
+    <state width="1515" height="125" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1616047122576" />
     <state width="2027" height="237" key="GridCell.Tab.0.bottom/0.0.2048.1122@0.0.2048.1122" timestamp="1613824937487" />
     <state width="2026" height="291" key="GridCell.Tab.0.bottom/0.0.2048.1152@0.0.2048.1152" timestamp="1612517407032" />
-    <state width="1515" height="223" key="GridCell.Tab.0.center" timestamp="1614851682409">
+    <state width="1515" height="125" key="GridCell.Tab.0.center" timestamp="1616047122576">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1515" height="223" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1614851682409" />
+    <state width="1515" height="125" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1616047122576" />
     <state width="2027" height="237" key="GridCell.Tab.0.center/0.0.2048.1122@0.0.2048.1122" timestamp="1613824937486" />
     <state width="2026" height="291" key="GridCell.Tab.0.center/0.0.2048.1152@0.0.2048.1152" timestamp="1612517407032" />
-    <state width="1515" height="223" key="GridCell.Tab.0.left" timestamp="1614851682409">
+    <state width="1515" height="125" key="GridCell.Tab.0.left" timestamp="1616047122575">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1515" height="223" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1614851682409" />
+    <state width="1515" height="125" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1616047122575" />
     <state width="2027" height="237" key="GridCell.Tab.0.left/0.0.2048.1122@0.0.2048.1122" timestamp="1613824937486" />
     <state width="2026" height="291" key="GridCell.Tab.0.left/0.0.2048.1152@0.0.2048.1152" timestamp="1612517407032" />
-    <state width="1515" height="223" key="GridCell.Tab.0.right" timestamp="1614851682409">
+    <state width="1515" height="125" key="GridCell.Tab.0.right" timestamp="1616047122576">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1515" height="223" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1614851682409" />
+    <state width="1515" height="125" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1616047122576" />
     <state width="2027" height="237" key="GridCell.Tab.0.right/0.0.2048.1122@0.0.2048.1122" timestamp="1613824937487" />
     <state width="2026" height="291" key="GridCell.Tab.0.right/0.0.2048.1152@0.0.2048.1152" timestamp="1612517407032" />
     <state x="307" y="56" key="SettingsEditor" timestamp="1614825174614">
@@ -181,18 +197,18 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1536.834@0.0.1536.834" timestamp="1614575775716" />
-    <state x="361" y="150" key="Vcs.Push.Dialog.v2" timestamp="1614825373445">
+    <state x="361" y="150" key="Vcs.Push.Dialog.v2" timestamp="1614932976093">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="361" y="150" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1614825373445" />
+    <state x="361" y="150" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1614932976093" />
     <state x="570" y="324" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1614825261288">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="570" y="324" key="git4idea.remote.GitConfigureRemotesDialog/0.0.1536.834@0.0.1536.834" timestamp="1614825261288" />
-    <state x="425" y="189" key="run.anything.popup" timestamp="1614827486170">
+    <state x="425" y="189" key="run.anything.popup" timestamp="1614935485576">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="425" y="189" key="run.anything.popup/0.0.1536.834@0.0.1536.834" timestamp="1614827486170" />
+    <state x="425" y="189" key="run.anything.popup/0.0.1536.834@0.0.1536.834" timestamp="1614935485576" />
     <state x="431" y="155" width="672" height="678" key="search.everywhere.popup" timestamp="1614753681641">
       <screen x="0" y="0" width="1536" height="834" />
     </state>

@@ -4,8 +4,8 @@
     <header id="header">
       <section class="container">
         <h1 id="logo">
-          <a href="#" title="谷粒学院">
-            <img src="~/assets/img/logo.png" width="100%" alt="谷粒学院">
+          <a href="#" title="谷粒学院" style="width: 80px; height: 80px; color: #ffef6e; font-size: 25px">
+            <img src="https://static001.geekbang.org/static/university/img/university-logo.c970df29.svg" width="100%" alt="谷粒学院">
           </a>
         </h1>
         <div class="h-r-nsl">
@@ -17,14 +17,14 @@
               <a>课程</a>
             </router-link>
             <router-link to="/teacher" tag="li" active-class="current">
-              <a>名师</a>
+              <a>讲师</a>
             </router-link>
-            <router-link to="/article" tag="li" active-class="current">
+            <!--<router-link to="/article" tag="li" active-class="current">
               <a>文章</a>
             </router-link>
             <router-link to="/qa" tag="li" active-class="current">
               <a>问答</a>
-            </router-link>
+            </router-link>-->
           </ul>
           <!-- / nav -->
           <ul class="h-r-login">
@@ -89,12 +89,15 @@
           </h4>
           <ul class="of flink-list">
             <li>
-              <a href="http://www.atguigu.com/" title="尚硅谷" target="_blank">尚硅谷</a>
+              <a href="https://www.csdn.net/" title="CSDN" target="_blank">CSDN</a>
+            </li>
+            <li>
+              <a href="https://www.jianshu.com/" title="简书" target="_blank">简书</a>
             </li>
           </ul>
           <div class="clear"></div>
         </div>
-        <div class="b-foot">
+        <!--<div class="b-foot">
           <section class="fl col-7">
             <section class="mr20">
               <section class="b-f-link">
@@ -123,7 +126,7 @@
             </section>
           </aside>
           <div class="clear"></div>
-        </div>
+        </div>-->
       </section>
     </footer>
     <!-- /公共底引入 -->
