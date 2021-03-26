@@ -10,15 +10,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c1cfa952-78a2-4e7e-b090-239d7ec278d2" name="Default Changelist" comment="实现课程评论">
-      <change afterPath="$PROJECT_DIR$/assets/img/teach.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/layouts/default.vue" beforeDir="false" afterPath="$PROJECT_DIR$/layouts/default.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/teacher/_id.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/teacher/_id.vue" afterDir="false" />
-    </list>
+    <list default="true" id="c1cfa952-78a2-4e7e-b090-239d7ec278d2" name="Default Changelist" comment="功能基本实现" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -113,6 +105,7 @@
       <workItem from="1615443478654" duration="274000" />
       <workItem from="1616044689444" duration="2237000" />
       <workItem from="1616409267388" duration="17000" />
+      <workItem from="1616647714078" duration="784000" />
     </task>
     <task id="LOCAL-00001" summary="完成课程列表和讲师列表页面以及用户注册和登录">
       <created>1614825289312</created>
@@ -135,7 +128,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614932970956</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="功能基本实现">
+      <created>1616647882739</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1616647882739</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -156,7 +156,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="完成课程列表和讲师列表页面以及用户注册和登录" />
     <MESSAGE value="实现课程评论" />
-    <option name="LAST_COMMIT_MESSAGE" value="实现课程评论" />
+    <MESSAGE value="功能基本实现" />
+    <option name="LAST_COMMIT_MESSAGE" value="功能基本实现" />
   </component>
   <component name="WindowStateProjectService">
     <state x="886" y="466" key="#ESLint" timestamp="1612514982389">
@@ -197,10 +198,10 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1536.834@0.0.1536.834" timestamp="1614575775716" />
-    <state x="361" y="150" key="Vcs.Push.Dialog.v2" timestamp="1614932976093">
+    <state x="361" y="150" key="Vcs.Push.Dialog.v2" timestamp="1616648729205">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="361" y="150" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1614932976093" />
+    <state x="361" y="150" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1616648729205" />
     <state x="570" y="324" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1614825261288">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
